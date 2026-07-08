@@ -195,8 +195,11 @@ Alternatively, you can set the key in your terminal session before running the a
 
 The scraper authenticates by loading a pre-saved Playwright browser state that contains your X (Twitter) session cookies.
 
-> [!WARNING]
-> **Your `sessions/auth.json` grants access to your X account. Never commit it to version control. It is excluded via `.gitignore` by default.**
+> [!IMPORTANT]
+> **Privacy & Security Guarantee:**
+> * **Strictly Local**: Your X (Twitter) login session is kept entirely local on your machine.
+> * **Completely Ignored by Git**: The folders `sessions/` and the file `cookies.json` are registered in the project's [`.gitignore`](file:///c:/Users/farze/Desktop/Typescript_practice/x-scrapper/twitter_scraper/.gitignore).
+> * **Safe from GitHub**: Git is blocked from tracking or pushing these credentials. They will never be uploaded to GitHub or any remote repository.
 
 ### Method 1 — Playwright Codegen (Recommended)
 
