@@ -1,0 +1,21 @@
+# Python environment
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Application directories
+sessions/
+state/
+scraped_data/
+downloaded_json/
+logs/
+.pytest_cache/
+cookies.json
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
