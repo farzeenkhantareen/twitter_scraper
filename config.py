@@ -9,6 +9,19 @@ values — import from this module instead.
 """
 
 from pathlib import Path
+import os
+
+# ---------------------------------------------------------------------------
+# Load environment variables from .env if present
+# ---------------------------------------------------------------------------
+_env_path = Path(__file__).resolve().parent / ".env"
+if _env_path.exists():
+    with open(_env_path, "r", encoding="utf-8") as _f:
+        for _line in _f:
+            _line = _line.strip()
+            if _line and not _line.startswith("#") and "=" in _line:
+                _key, _val = _line.split("=", 1)
+                os.environ.setdefault(_key.strip(), _val.strip().strip('"').strip("'"))
 
 # ---------------------------------------------------------------------------
 # Directory Layout

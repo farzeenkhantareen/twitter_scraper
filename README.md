@@ -166,12 +166,28 @@ To change any setting, edit `config.py` directly. No `.env` file is required.
 
 The dashboard includes an **AI Analyst Mode** that enables chatting with your scraped datasets. To use this feature, you must configure your Groq API key:
 
-1. Open [`routes/ai.py`](file:///c:/Users/farze/Desktop/Typescript_practice/x-scrapper/twitter_scraper/routes/ai.py).
-2. Locate the `GROQ_API_KEY` assignment (around line 21):
-   ```python
-   GROQ_API_KEY = "your_groq_api_key"
+### Method A — Using a `.env` File (Recommended)
+1. Create a file named `.env` in the root of the project. (Note: `.env` is ignored by Git, ensuring your key is never committed to GitHub).
+2. Add your Groq API key to this file:
+   ```env
+   GROQ_API_KEY=your_actual_groq_api_key
    ```
-3. Replace the placeholder with your own Groq API key (you can generate one in the [Groq Console](https://console.groq.com/)).
+
+### Method B — Setting the Environment Variable directly
+Alternatively, you can set the key in your terminal session before running the application:
+
+* **Windows (PowerShell)**:
+  ```powershell
+  $env:GROQ_API_KEY="your_actual_groq_api_key"
+  ```
+* **Windows (Command Prompt)**:
+  ```cmd
+  set GROQ_API_KEY=your_actual_groq_api_key
+  ```
+* **macOS / Linux**:
+  ```bash
+  export GROQ_API_KEY="your_actual_groq_api_key"
+  ```
 
 ---
 
